@@ -1,4 +1,4 @@
-# HTML-CSS-JAVA-SCRIP
+HTML-CSS-JAVA-SCRIPT
 
 <!DOCTYPE html> -->  Declaration defines that this document is an HTML5 document
 <html>   --> Tag open   this is the root element of an HTML page
