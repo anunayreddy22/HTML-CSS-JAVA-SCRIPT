@@ -13,4 +13,3 @@
 </body>  The visible part of the HTML document is between <body> and </body>
 </html>  -> closing tag
 
-# HTML LINKS
