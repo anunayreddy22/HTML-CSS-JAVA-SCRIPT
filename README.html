@@ -377,18 +377,214 @@ console.log("Hello World!"); --> To print a statement
 JavaScript is a lightweight, cross-platform, single-threaded, and interpreted compiled programming language. It is also known as the scripting language for webpages. It is well-known for the development of web pages, and many non-browser environments also use it. Javascript Version 6 i.e ES6 contains any features which helps in development.
 
 
+Internal javascript
+  
 if we want to write js code in HTMl file only we can either include it in Head or Body between <script> and </script> tags
 
-<!DOCTYPE HTML>
-<html>
-    <title>
-          Sample Code Adding js code in head section.
-    </title>
-            
-    <script>
+  <!DOCTYPE HTML>
+  <html>
+      <head>
+                <title>
+                      Sample Code Adding js code in head section.
+                </title>
+                        
+                <script>
+                   function myFunc() {
+                        document.getElementById("demo").innerHTML = "Content Changes!"
+                   }
+                </script>
+       </head>
+  
+       <body>
+
+          <h3 id= "demo" style="color:blue">
+          Anunay Reddy Kallem
+          </h3>
+
+          <button type = "button" onClick = "MyFunc">
+          Click Here
+          </button>
+      </body>
+  </html>
+  
+
+External Javascript File --> extension .js
 
 
-    </script>
+Javascript Output
+
+1. innerHTML property
+
+document.getElementById("id").innerHTML;
+
+2.  JavaScript console.log()
+
+Console.log("Hello World")
+
+3. JavaScript document.write()
+
+document.write("Hello!");
+
+4. JavaScript window.alert()
+
+window.alert("Hello!");
+
+5. JavaScript window.print()
+
+The window.print() method is used to open the browser’s print dialog,  onclick="window.print()">
+
+6.  JavaScript window.prompt()
+
+let userInput = window.prompt("Please Enter your Input");
+
+
+  creating object in js
+
+  // Simple function
+function vehicle(name, maker, engine) {
+    this.name = name;
+    this.maker = maker;
+    this.engine = engine;
+}
+// New keyword to create an object
+let car = new vehicle('GT', 'BMW', '1998cc');
+// Property accessors
+console.log(car.name);
+console.log(car.maker);
+console.log(car['engine']);
+
+
+
+  JSON
+
+  JSON (JavaScript Object Notation) is a handy way to share data. It’s easy for both people and computers to understand. In JavaScript, JSON helps organize data into simple objects. 
+
+  const person = {
+  "name": "John",
+  "age": 30,
+  "city": "New York"
+};
+
+The object values can be accessed by using the dot (“.”) notation.
+We can also access objects by using bracket([]) notation.
+Ex: person.name, person.age, person.city
+
+
+1. For above json let see how we can loop
+
+
+Looping of an object can be done by using a property for-in loop.
+For looping an object we can even use brackets (“[]”) in the for-in loop property. 
+
+for(a in person){
+  console.log(perseon[a])
+}
+
+
+2. Converting a JSON Text to a JavaScript Object
+
+JSON.parse() method
+
+const jsonString = '{"name": "John", "age": 30}';
+const jsonObject = JSON.parse(jsonString);
+console.log(jsonObject.name);
+
+
+
+  
+
+3. Importing the local data.json file and display output.
+  
+ // data.json file 
+{ 
+	"data": [ 
+		{ 
+			"name": "GFG", 
+			"description" : "A Computer Science portal!"
+		} 
+	] 
+}
+ 
+  
+const sample = require('./data.json'); 
+console.log(sample.data[0]);
+
+
+
+4. JavaScript Date parse() 
+
+
+let date = "February 18, 2018 12:30 PM";
+
+let msec = Date.parse(date);
+console.log(msec); --> gives 178476382 as the output.
+
+  
+5. JavaScript JSON stringify() 
+
+The JSON.stringify() method in JavaScript is used to convert JavaScript objects into a JSON string. 
+This method takes a JavaScript object as input and returns a JSON-formatted string representing that object.
+
+let value = ["Logan", 21, "Peter", 24];
+let result = JSON.stringify(value);
+
+
+FUNCTIONS
+
+  function myFunction(g1, g2) {
+    return g1 / g2;
+}
+const value = myFunction(8, 2); // Calling the function
+console.log(value);
+
+
+
+ARRAYS
+
+1. PUSH and POP
+  array.push()  or array.pop()  -> add/deletes at the end of the array
+
+2.SHIFT and UNSHIFT
+  array.shift()  or array.unshift --> removes/adds first element of the array
+
+3. INCLUDES
+  array.include('xyz')  --> To check a specifed element is present in array or not
+  
+4. MAP
+  let newArray = oldArray.map(function (element) {
+    return element * 5;
+});
+
+
+  
+
+ES6 CONCEPTS**
+  
+
+ARROW FUNCTIONS*
+
+Arrow Function is one of the most used and efficient methods to create a function in JavaScript because of its comparatively easy implementation
+
+let function_name = (argument1, argument2 ,..) => expression
+
+// Arrow function for multiplying two numbers
+let value = (a, b) => a * b;
+console.log(value(3, 5));
+
+  
+//Arrow Functions without parameters
+const gfg = () => {
+    console.log( "Hi from GeekforGeeks!" );
+}
+
+gfg();
+
+//Arrow Functions with parameters
+const gfg = ( x, y, z ) => {
+    console.log( x + y + z )
+}
+
+gfg( 10, 20, 30 );
 
 
 
@@ -401,8 +597,9 @@ if we want to write js code in HTMl file only we can either include it in Head o
 
 
 
+  
 
-
+  
 
 
 
