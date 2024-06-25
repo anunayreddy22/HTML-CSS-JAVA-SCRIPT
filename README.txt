@@ -221,6 +221,162 @@ Example
 HTML Tables
 
 
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<table style="width:100%">
+  <tr>                                --> row
+    <th>Company</th>                    th under 1 tr data of 1st row
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+To make a cell span over multiple rows, use the rowspan attribute
+To make a cell span over multiple columns, use the colspan attribute
+
+HTML Lists
+
+<ul>
+  <li>Coffee</li>              --> un ordered
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<ol>
+  <li>Coffee</li>              --> ordered
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+
+div element
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Multiple DIV Elements</h1>
+
+<div style="background-color:#FFF4A3;">
+  <h2>London</h2>
+  <p>London is the capital city of England.</p>
+  <p>London has over 13 million inhabitants.</p>
+</div>
+
+
+
+<div style="background-color:#D9EEE1;">
+  <h2>Rome</h2>
+  <p>Rome is the capital city of Italy.</p>
+  <p>Rome has almost 3 million inhabitants.</p>
+</div>
+
+
+</body>
+</html>
+
+
+If you change the <div> element's display property from block to inline-block, the <div> elements will no longer add a line break before and after, and will be displayed side by side instead of on top of each other.
+
+
+HTML FORMS
+
+An HTML form is used to collect user input. The user input is most often sent to a server for processing.
+
+The <input> Element
+
+An <input> element can be displayed in many ways, depending on the type attribute.
+
+Here are some examples:
+
+Type	                          Description
+<input type="text">	Displays a single-line text input field
+<input type="radio">	Displays a radio button (for selecting one of many choices)
+<input type="checkbox">	Displays a checkbox (for selecting zero or more of many choices)
+<input type="submit">	Displays a submit button (for submitting the form)
+<input type="button">	Displays a clickable button
+
+
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe">
+</form>
+
+
+The <select> element defines a drop-down list
+
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+
+
+  <label for="pwd">Password:</label><br>
+  <input type="password" id="pwd" name="pwd"><br><br>
+  <input type="submit" value="Submit">
+
+
+Button
+
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+
+
+<textarea>	Defines a multiline input control (text area)
+<label>	Defines a label for an <input> element
+<fieldset>	Groups related elements in a form
+<legend>	Defines a caption for a <fieldset> element
+<select>	Defines a drop-down list
+<optgroup>	Defines a group of related options in a drop-down list
+<option>	Defines an option in a drop-down list
+<button>	Defines a clickable button
+<datalist>	Specifies a list of pre-defined options for input controls
+<output>	Defines the result of a calculation
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+JAVA SCRIPT
+
+JavaScript is an interpreted language that executes code line by line providing more flexibility. It is a commonly used programming language to create dynamic and interactive elements in web applications.
+
+console.log("Hello World!"); --> To print a statement
+
+JavaScript is a lightweight, cross-platform, single-threaded, and interpreted compiled programming language. It is also known as the scripting language for webpages. It is well-known for the development of web pages, and many non-browser environments also use it
+
+
 
 
 
