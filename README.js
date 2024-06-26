@@ -1,5 +1,9 @@
 #HTML-CSS-JAVA-SCRIPT
 
+
+java script resource --> https://javascript.info/
+
+
 HTML is not Case Sensitive.
 
 <!DOCTYPE html> -->  Declaration defines that this document is an HTML5 document
@@ -401,8 +405,6 @@ To make the CSS flex method work, surround the <div> elements with another <div>
 
 
 
-
-
 JAVA SCRIPT
 
 JavaScript is an interpreted language that executes code line by line providing more flexibility. It is a commonly used programming language to create dynamic and interactive elements in web applications.
@@ -590,6 +592,31 @@ ARRAYS
     return element * 5;
 });
 
+ARROW FUNCTIONS*
+
+Arrow Function is one of the most used and efficient methods to create a function in JavaScript because of its comparatively easy implementation
+
+let function_name = (argument1, argument2 ,..) => expression
+
+// Arrow function for multiplying two numbers
+let value = (a, b) => a * b;
+console.log(value(3, 5));
+
+  
+//Arrow Functions without parameters
+const gfg = () => {
+    console.log( "Hi from GeekforGeeks!" );
+}
+
+gfg();
+
+//Arrow Functions with parameters
+const gfg = ( x, y, z ) => {
+    console.log( x + y + z )
+}
+
+gfg( 10, 20, 30 );
+
 
   
 
@@ -674,7 +701,69 @@ element.removeEventListener(event, handler, [options]);
 </script>
 
 
-Callbacks
+Promises
+
+The constructor syntax for a promise object is:
+
+let promise = new Promise(function(resolve, reject) {
+  // executor (the producing code)
+
+  // after 1 second signal that the job is done with the result "done"
+  setTimeout(() => resolve("done"), 1000);
+  // after 1 second signal that the job is finished with an error
+  setTimeout(() => reject(new Error("Whoops!")), 1000);
+});
+When the executor obtains the result, be it soon or late, doesn’t matter, it should call one of these callbacks:
+
+resolve(value) — if the job is finished successfully, with result value.
+reject(error) — if an error has occurred, error is the error object.
+	
+
+If we’re interested only in successful completions, then we can provide only one function argument to .then:
+	
+let promise = new Promise(resolve => {
+  setTimeout(() => resolve("done!"), 1000);
+});
+
+promise.then(alert);
+
+
+Fetch
+
+fetch('/article/promise-chaining/user.json')
+  // .then below runs when the remote server responds
+  .then(function(response) {
+    // response.text() returns a new promise that resolves with the full response text
+    // when it loads
+    return response.text();
+  })
+  .then(function(text) {
+    // ...and here's the content of the remote file
+    alert(text); // {"name": "iliakan", "isAdmin": true}
+  });
+
+
+More about promise Apis -- https://javascript.info/promise-api
+
+
+
+ASYNC / AWAIT
+
+async ensures that the function returns a promise, and wraps non-promises in it. Simple enough, right? 
+But not only that. There’s another keyword, await, that works only inside async functions.
+
+async function f() {
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("done!"), 1000)
+  });
+
+  let result = await promise; // wait until the promise resolves (*)
+
+  alert(result); // "done!"
+}
+
+f();
 
 
 
@@ -687,36 +776,9 @@ Callbacks
 	
 
 
-
-
-
-ES6 CONCEPTS**
   
 
-ARROW FUNCTIONS*
 
-Arrow Function is one of the most used and efficient methods to create a function in JavaScript because of its comparatively easy implementation
-
-let function_name = (argument1, argument2 ,..) => expression
-
-// Arrow function for multiplying two numbers
-let value = (a, b) => a * b;
-console.log(value(3, 5));
-
-  
-//Arrow Functions without parameters
-const gfg = () => {
-    console.log( "Hi from GeekforGeeks!" );
-}
-
-gfg();
-
-//Arrow Functions with parameters
-const gfg = ( x, y, z ) => {
-    console.log( x + y + z )
-}
-
-gfg( 10, 20, 30 );
 
 
 
