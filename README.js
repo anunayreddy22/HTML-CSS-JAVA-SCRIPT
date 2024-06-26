@@ -361,6 +361,41 @@ Button
 
 
 
+
+div tags
+
+
+The <div> Element
+The <div> element is by default a block element, meaning that it takes all available width, and comes with line breaks before and after.
+
+<div> as a container
+The <div> element is often used to group sections of a web page together.
+
+to use display: inline-block to align div elements side by side:
+
+<style>
+div {
+  width: 30%;
+  display: inline-block;
+}
+</style>
+
+Flex
+The CSS Flexbox Layout Module was introduced to make it easier to design flexible responsive layout structure without using float or positioning.
+
+
+To make the CSS flex method work, surround the <div> elements with another <div> element and give it the status as a flex container.
+
+<style>
+.mycontainer {
+  display: flex;
+}
+.mycontainer > div {
+  width:33%;
+}
+</style>
+
+
 --------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -558,6 +593,103 @@ ARRAYS
 
   
 
+DOM tree
+
+The backbone of an HTML document is tags.
+
+According to the Document Object Model (DOM), every HTML tag is an object. Nested tags are “children” of the enclosing one. The text inside a tag is an object as well.
+
+All these objects are accessible using JavaScript, and we can use them to modify the page.
+
+	
+document.body.style.background = 'red'; // make the background red for the time we specify below
+setTimeout(() => document.body.style.background = '', 3000); // return back
+
+
+
+Browser Events
+
+
+Mouse events:
+click – when the mouse clicks on an element (touchscreen devices generate it on a tap).
+contextmenu – when the mouse right-clicks on an element.
+mouseover / mouseout – when the mouse cursor comes over / leaves an element.
+mousedown / mouseup – when the mouse button is pressed / released over an element.
+mousemove – when the mouse is moved.
+Keyboard events:
+
+keydown and keyup – when a keyboard key is pressed and released.
+	
+Form element events:
+submit – when the visitor submits a <form>.
+focus – when the visitor focuses on an element, e.g. on an <input>.
+
+
+Event handlers
+
+To react on events we can assign a handler – a function that runs in case of an event.
+Handlers are a way to run JavaScript code in case of user actions.
+
+A handler can be set in HTML with an attribute named on<event>.
+For instance, to assign a click handler for an input, we can use onclick, like here:
+<input value = "click me" onclick = "alert('clicked!!!!')" type = "button">
+
+
+
+
+Let’s say, one part of our code wants to highlight a button on click, and another one wants to show a message on the same click.
+We’d like to assign two event handlers for that. But a new DOM property will overwrite the existing one:
+
+input.onclick = function() { alert(1); }
+// ...
+input.onclick = function() { alert(2); } // replaces the previous handler
+
+Alternative way of managing handlers using the special methods addEventListener and removeEventListener
+which aren’t bound by such constraint.
+
+element.addEventListener(event, handler, [options]);
+
+event -> Event name, e.g. "click".
+handler -> The handler function.
+options -> An additional optional object with properties.
+
+To remove the handler, use removeEventListener:
+element.removeEventListener(event, handler, [options]);
+
+<input id="elem" type="button" value="Click me"/>
+
+<script>
+  function handler1() {
+    alert('Thanks!');
+  };
+
+  function handler2() {
+    alert('Thanks again!');
+  }
+
+  elem.onclick = () => alert("Hello");
+  elem.addEventListener("click", handler1); // Thanks!
+  elem.addEventListener("click", handler2); // Thanks again!
+
+</script>
+
+
+Callbacks
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
 ES6 CONCEPTS**
   
 
@@ -585,6 +717,7 @@ const gfg = ( x, y, z ) => {
 }
 
 gfg( 10, 20, 30 );
+
 
 
 
